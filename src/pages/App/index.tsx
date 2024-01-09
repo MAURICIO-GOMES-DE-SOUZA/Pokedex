@@ -5,9 +5,11 @@ export function App() {
   return (
     <Container>
       <header>Header</header>
+
       <main>
-       <Outlet/>
+        <Outlet />
       </main>
+
       <footer>footer</footer>
     </Container>
   );

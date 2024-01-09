@@ -1,9 +1,7 @@
 import axios from "axios";
 
-
-const envApi = import.meta.env.VITE_API;
+const envAPI = import.meta.env.VITE_API;
 
 export const API = axios.create({
-    baseURL: envApi,
+  baseURL: envAPI,
 });
-
