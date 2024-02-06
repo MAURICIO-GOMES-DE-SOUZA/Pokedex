@@ -2,7 +2,9 @@ import { Pokemon } from "../../@types/pokemon";
 import { CardType } from "../CardType";
 import { Container } from "./styles";
 
-type Props = { pokemon: Pokemon };
+type Props = {
+  pokemon: Pokemon;
+};
 
 export function PokemonCard({ pokemon }: Props) {
   return (
@@ -10,13 +12,12 @@ export function PokemonCard({ pokemon }: Props) {
       <img src={pokemon.sprites.other["official-artwork"].front_default} />
 
       <strong>
-        #{pokemon.id}
-        {pokemon.name}
+        #{pokemon.id} {pokemon.name}
       </strong>
 
-      <div className="boxtypes">
+      <div className="boxTypes">
         {pokemon.types.map((type) => {
-          return <CardType type={type.type.name} key={type.type.name}/>;
+          return <CardType type={type.type.name} key={type.type.name} />;
         })}
       </div>
     </Container>
